@@ -1,0 +1,16 @@
+<h1> El gran formulario de encuestas </h1>
+<div id="form">
+  <form (ngSubmit)="onSubmit()"  #surveyForm="ngForm">
+
+    <label for="nombre"> Tu nombre </label>
+    <input type="text" name="nombre" [(ngModel)]="survey.nombre" required/>
+    <label for="edad"> tu edad </label>
+    <input type="number" name="edad" [(ngModel)]="survey.edad" required/>
+
+    <label for="ganar"> ¿por que deberías ganar? </label>
+    <input type="text" name="ganar" [(ngModel)]="survey.ganar" required minlength="10"/>
+
+    <button type="submit" class="btn btn-success" [disabled]="!surveyForm.form.valid">Submit</button>
+
+  </form>
+</div>

@@ -1,0 +1,16 @@
+<h1>
+{{title}}
+</h1>
+<p>
+  Somos la noicias más genial del mundo.
+</p>
+
+<button (click)="setTitle('el nuevo titulo')" value="cambia titulo">
+boton de cambio de titulo
+  </button>
+
+
+  <label for="titulomagico">
+    magia negra
+  </label>
+  <input type="text" name="titulomagico" [(ngModel)]="title" #ctrl="ngModel" />
