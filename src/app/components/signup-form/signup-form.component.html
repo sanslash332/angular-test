@@ -1,0 +1,23 @@
+<p> bienvenido al formulario de registro! </p>
+<div id="signupform">
+  <form (ngSubmit)="onSubmit()" #signupform="ngForm" [formGroup]="signup">
+<label for="nombre"> tu nombre </label>
+
+    <input type="text" formControlName="nombre" name="nombre" />
+
+    <label for="mail"> ingresa tu correo </label>
+    <input type="text" name="mail" formControlName="correo" >
+
+<label for="rut"> ingresa tu rusht</label>
+    <input type="text" name="rut" formControlName="rut" />
+<label for="password"> ingresa tu contraseña </label>
+    <input type="password" name="password" formControlName="password" />
+    <label for="acceptTerms"> acepta los términos de condiciones? </label>
+    <input type="checkbox" name="acceptTerms" formControlName="acceptTerms" />
+
+      <button type="submit" class="btn btn-success" >Submit</button>
+
+  </form>
+
+
+</div>
